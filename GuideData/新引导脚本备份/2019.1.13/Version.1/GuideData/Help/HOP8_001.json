@@ -1,0 +1,115 @@
+{
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "OpenArea",
+                "MapId": "1001",
+                "AreaId": "20"
+            }
+        }
+    ],
+    "CompleteConditions": [
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "P8_001"
+            }
+        }
+    ],
+    "Preconditions": [
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "P7_001"
+            }
+        }
+    ],
+    "DoData": [
+        {
+            "Data": {
+                "DoType": "LoadElement",
+                "NodeId": "12469",
+                "ElementKey": "50204",
+                "Position": "0,0.5,0",
+                "EulerAngles":"0,270,0",
+                "Scale":"1,1,1"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "LoadElement",
+                "NodeId": "12269",
+                "ElementKey": "50204",
+                "Position": "0,0.5,0",
+                "EulerAngles":"0,90,0",
+                "Scale":"1,1,1"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "LoadElement",
+                "NodeId": "8052",
+                "ElementKey": "50204",
+                "Position": "0,0.5,0",
+                "EulerAngles":"0,90,0",
+                "Scale":"1,1,1"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "LoadElement",
+                "NodeId": "8051",
+                "ElementKey": "flower004",
+                "Position": "0,0.5,0",
+                "EulerAngles":"0,0,0",
+                "Scale":"1,1,1"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "LoadElement",
+                "NodeId": "8053",
+                "ElementKey": "Other072",
+                "Position": "0,0.5,0",
+                "EulerAngles":"0,0,0",
+                "Scale":"1,1,1"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "LoadElement",
+                "NodeId": "7828",
+                "ElementKey": "Other073",
+                "Position": "0,0.5,0",
+                "EulerAngles":"0,0,0",
+                "Scale":"1,1,1"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "HideNodeElement",
+                "NodeIds": "[9885,9886,9887,7808,7809,7811,9038]"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "DisableNodeEvent",
+                "NodeIds": "[7812,7811,7810,7809,7808,9038,9323,11058,12067,11057,12870,9087,11262,12267,11056,13070,9086,8544,9092,8037,10353]"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "SetCanWalk",
+                "NodeIds": "[11058,12067,11057,12870,9087,11262,12267,11056,13070,9086,8544,9092,8037,10353]",
+                "CanWalk": "True"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "SetCanWalk",
+                "NodeIds": "[6943,6942,6941,6940,7140,7141,7142,7144,7353,7352,9324,9039,8051,7828,8053]",
+                "CanWalk": "False"
+            }
+        }
+    ]
+}

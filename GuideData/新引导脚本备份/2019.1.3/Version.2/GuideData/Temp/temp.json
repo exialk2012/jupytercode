@@ -1,0 +1,20 @@
+{
+  "IsClickToNext": false,
+  "IsAutoToNext": true,
+  "DoData": [
+    {
+      "Data": {
+        "DoType": "LoadElement",
+        "NodeId": "12870",
+        "ElementKey": "900006",
+        "EulerAngles": "0,90,0"
+      }
+    },
+    {
+      "Data": {
+        "DoType": "Await",
+        "WaitTime": "2"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1258 @@
+{
+    "GuideName": "P4_002",
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "OpenPanel",
+                "PanelName": "MainPanel"
+            }
+        },
+        {
+            "Data": {
+                "TriggerType": "GuideCompleted",
+                "GuideName": "P4_001"
+            }
+        }
+    ],
+    "Preconditions": [
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "P4_001"
+            }
+        }
+    ],
+    "NodeData": [
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "1.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Teleport",
+                        "MapId": "1001",
+                        "NodeId": "12672"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel": "MainPanel",
+                        "Objects": "[\"LeftButtons\",\"Teleport\",\"ChatImage\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel": "PlayerPropertyPanel",
+                        "Objects": "[\"Parent\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetCanWalk",
+                        "NodeIds":"[9626,9625,9887,9886,9885,6943,6942,6941,6940,7140,7141,7142,7144,7353,7352,9324,9039]",
+                        "CanWalk":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetCanWalk",
+                        "NodeIds":"[12469,12067,11057,12870,12269,12267,11056,13070,8052,8544,9092,8037]",
+                        "CanWalk":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetCanWalk",
+                        "NodeIds":"[10838]",
+                        "CanWalk":"True"
+                    }
+                },
+                {
+                    "Data": {
+                      "DoType": "LoadElement",
+                      "NodeId": "11673",
+                      "ElementKey": "900004"
+                    }
+                },
+                {
+                    "Data": {
+                      "DoType": "LoadElement",
+                      "NodeId": "11058",
+                      "ElementKey": "50204"
+                    }
+                },
+                {
+                    "Data": {
+                      "DoType": "LoadElement",
+                      "NodeId": "11262",
+                      "ElementKey": "50204"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideNodeElement",
+                        "NodeIds":"[10145,10143,6942,7141,9038,7582,7358,12469,12067,11057,12870,12269,12267,11056,13070,10838,8052,8544,9092,8037]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "DisableNodeEvent",
+                        "NodeIds":"[10145,10144,10143,6942,6941,7141,9038,9323,12469,12067,11057,12870,12269,12267,11056,13070,10838,8052,8544,9092,8037]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.0",
+                        "Summary": "将遮罩透明度设置为0.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ShowMask",
+                        "Summary": "显示遮罩"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text":"<size=20>那么请义无反顾的踏入吧！\n名为『迷域』的所在</size>",
+                        "Position":"0,250",
+                        "ShowFrame":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "WaitPanelOpen",
+                        "PanelName":"AdventurePanel"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "PlayAVG",
+                        "Name":"0-22",
+                        "AVG配置备注": "此处应配置AVG-GuideSys_40101"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel": "AdventurePanel",
+                        "Objects": "[\"AdventurePanel/AdventureBtns/GridBtns/102\",\"AdventurePanel/AdventureBtns/GridBtns/103\",\"AdventurePanel/AdventureBtns/GridBtns/104\",\"AdventurePanel/AdventureBtns/GridBtns/105\",\"AdventurePanel/AdventureBtns/GridBtns/106\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ShowMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=20><color=green>第一区域</color>是相对稳定的区域\n请点击进行选择</size>",
+                        "Position": "0,-300"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel": "AdventurePanel",
+                        "Objects": "[\"AdventurePanel/AdventureBtns/GridBtns/101\"]",
+                        "Order": "1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=20>『区域』会以“关”的形式来进行呈现\n那么请选择作为初始<color=green>『第一关』</color>吧</size>",
+                        "Position": "0,-300"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel": "AdventureAreaPanel",
+                        "Objects": "[\"AdventureAreaPanel/AdventureBtns/GridBtns/BtnAdventureArea\"]",
+                        "Order": "1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "PlayAVG",
+                        "Name":"0-22",
+                        "AVG配置备注": "此处应配置AVG-GuideSys_40102"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetInteractableNames",
+                        "Names": "[\"Mask\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel": "PreparationPanel",
+                        "Objects": "[\"PreparationPanel/SkinInfo\"]",
+                        "Order": "1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=20>名为傅伊·伽拉姆的存在\n拥有着从属『持有者』职阶所相对应的个体属性</size>",
+                        "Position": "0,-300"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel": "PreparationPanel",
+                        "Objects": "[\"PreparationPanel/SkinInfo\"]",
+                        "Order": "1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "PlayAVG",
+                        "Name":"0-22",
+                        "AVG配置备注": "此处应配置AVG-GuideSys_40103"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel": "PreparationPanel",
+                        "Objects": "[\"BtnEditDeck\"]",
+                        "Order": "1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=20>点击<color=red>【战技装载】</color>，进入战技配置页面</size>",
+                        "Position": "0,-300"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowPictures",
+                        "Paths": "[\"DeckPoint_01\",\"DeckPoint_02\",\"DeckPoint_03\"]"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetInteractableNames",
+                        "Names": "[\"CardParent\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel": "DeckPanel",
+                        "Objects": "[\"1010030\"]",
+                        "Order": "1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<color=#ff0000>『烈破』</color>是『持有者』属性的一种体现\n点击它即可进行配置",
+                        "Position": "0,-300"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel": "DeckPanel",
+                        "Objects": "[\"BtnSave\"]",
+                        "Order": "1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=20>装载之后需要点击<color=#ff0000>保存</color>\n这样才可以在特定的情形下进行运用</size>",
+                        "Position": "0,-300"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel": "DeckPanel",
+                        "Objects": "[\"BtnClear\"]",
+                        "Order": "1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=20>如果对当前的战技配置并不满意也无需过于烦恼\n点击<color=#ff0000>清空卡组</color>按钮即可清除当前所有的战技配置</size>",
+                        "Position": "0,-300"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "PlayAVG",
+                        "Name":"0-22",
+                        "AVG配置备注": "此处应配置AVG-GuideSys_40104"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetInteractableNames",
+                        "Names": "[\"CardParent\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel": "DeckPanel",
+                        "Objects": "[\"1010030\"]",
+                        "Order": "1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "请点击战技<color=#ff0000>『烈破』</color><color=green>01/04</color>",
+                        "Position": "0,-300"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetInteractableNames",
+                        "Names": "[\"CardParent\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel": "DeckPanel",
+                        "Objects": "[\"1010030\"]",
+                        "Order": "1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "请点击战技<color=#ff0000>『烈破』</color><color=green>02/04</color>",
+                        "Position": "0,-300"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetInteractableNames",
+                        "Names": "[\"CardParent\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel": "DeckPanel",
+                        "Objects": "[\"1010030\"]",
+                        "Order": "1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "请点击战技<color=#ff0000>『烈破』</color><color=green>03/04</color>",
+                        "Position": "0,-300"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetInteractableNames",
+                        "Names": "[\"CardParent\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel": "DeckPanel",
+                        "Objects": "[\"1010030\"]",
+                        "Order": "1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "请点击战技<color=#ff0000>『烈破』</color><color=green>04/04</color>",
+                        "Position": "0,-300"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetInteractableNames",
+                        "Names": "[\"CardParent\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel": "DeckPanel",
+                        "Objects": "[\"DeckPanel/ModuleCardsLibrary/Cards/ImgMask/1010020\"]",
+                        "Order": "1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "请点击新的战技<color=#ff0000>『域破』</color><color=green>01/04</color>",
+                        "Position": "0,-300"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetInteractableNames",
+                        "Names": "[\"CardParent\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel": "DeckPanel",
+                        "Objects": "[\"DeckPanel/ModuleCardsLibrary/Cards/ImgMask/1010020\"]",
+                        "Order": "1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "请点击战技<color=#ff0000>『域破』</color><color=green>02/04</color>",
+                        "Position": "0,-300"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetInteractableNames",
+                        "Names": "[\"CardParent\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel": "DeckPanel",
+                        "Objects": "[\"DeckPanel/ModuleCardsLibrary/Cards/ImgMask/1010020\"]",
+                        "Order": "1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "请点击战技<color=#ff0000>『域破』</color><color=green>03/04</color>",
+                        "Position": "0,-300"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetInteractableNames",
+                        "Names": "[\"CardParent\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel": "DeckPanel",
+                        "Objects": "[\"DeckPanel/ModuleCardsLibrary/Cards/ImgMask/1010020\"]",
+                        "Order": "1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "请点击战技<color=#ff0000>『域破』</color><color=green>04/04</color>",
+                        "Position": "0,-300"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "PlayAVG",
+                        "Name":"0-22",
+                        "AVG配置备注": "此处应配置AVG-GuideSys_40105"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel": "DeckPanel",
+                        "Objects": "[\"BtnSave\"]",
+                        "Order": "1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=20>大概就是如此吧\n那么请点击<color=red>『保存』</color>来对战技配置进行适应吧</size>",
+                        "Position": "0,-300"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel": "DeckPanel",
+                        "Objects": "[\"BtnBack\"]",
+                        "Order": "1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=20>请点击<color=red>『返回』</color>回到先前的准备界面</size>",
+                        "Position": "0,-300"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "PlayAVG",
+                        "Name":"0-22",
+                        "AVG配置备注": "此处应配置AVG-GuideSys_40106"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel": "PreparationPanel",
+                        "Objects": "[\"BtnBattle\"]",
+                        "Order": "1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=20>接下来即是正式进入迷域的时刻\n点击<color=red>『开始』</color>前往那充满机遇和未知的境遇吧</size>",
+                        "Position": "0,-300"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "WaitPanelOpen",
+                        "PanelName": "AdventuringPanel"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowSingleEffect",
+                        "EffectName": "FeatureUnlocked",
+                        "OverridElements": "{\"TxtTips\":\"迷域探索开始\"}"                        
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "WaitPanelClose",
+                        "PanelName": "AdventuringClosingPanel"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "1.0",
+                        "Summary": "将遮罩透明度设置为1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ShowMask",
+                        "Summary": "隐藏遮罩"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=30>正在回归『众矢』.</size>",
+                        "Position": "0,0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "0.8"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=30>正在回归『众矢』..</size>",
+                        "Position": "0,0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "0.8"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=30>正在回归『众矢』...</size>",
+                        "Position": "0,0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "0.8"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=30>正在回归『众矢』... .</size>",
+                        "Position": "0,0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "0.8"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=30>正在回归『众矢』... ..</size>",
+                        "Position": "0,0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "0.8"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=30>正在回归『众矢』... ...</size>",
+                        "Position": "0,0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Complete"
+                    }
+                }
+            ]
+        }
+    ]
+}

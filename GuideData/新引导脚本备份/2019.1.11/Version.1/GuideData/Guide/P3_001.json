@@ -1,0 +1,519 @@
+{
+    "GuideName": "P3_001",
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "OpenPanel",
+                "PanelName": "MainPanel"
+            }
+        },
+        {
+            "Data": {
+                "TriggerType": "GuideCompleted",
+                "GuideName": "P2_002"
+            }
+        }
+    ],
+    "Preconditions": [
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "P2_002"
+            }
+        }
+    ],
+    "NodeData": [
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "1.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Teleport",
+                        "MapId": "1001",
+                        "NodeId": "13471"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel": "MainPanel",
+                        "Objects": "[\"LeftButtons\",\"Teleport\",\"ChatImage\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel": "PlayerPropertyPanel",
+                        "Objects": "[\"Parent\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideNodeElement",
+                        "NodeIds": "[11058,11262,11673]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active": "True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "WaitMoveTo",
+                        "PassingNodes": "[{\"MapId\":1001,\"NodeId\":13271}]",
+                        "ArrivalNodes": "[{\"MapId\":1001,\"NodeId\":13271}]"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active": "False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "PlayAVG",
+                        "Name": "QSGuideAVG_01",
+                        "AVG配置备注": "此处应配置AVG-QSGuideAVG_01"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "LoadElement",
+                        "NodeId": "12671",
+                        "ElementKey": "Vebie",
+                        "Position": "0,1,0",
+                        "EulerAngles":"0,180,0",
+                        "Scale":"1,1,1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "LoadElement",
+                        "NodeId": "12670",
+                        "ElementKey": "Lia",
+                        "Position": "0,1,0",
+                        "EulerAngles":"0,0,0",
+                        "Scale":"1,1,1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.0",
+                        "Summary": "将遮罩透明度设置为0.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ShowMask",
+                        "Summary": "显示遮罩"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active": "False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=20>那身影就是『众矢』的居民吧\n去和他们进行接触吧,或许能得到相当有用的消息</size>",
+                        "Position": "0,250",
+                        "ShowFrame": "True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active": "True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "WaitMoveTo",
+                        "PassingNodes": "[{\"MapId\":1001,\"NodeId\":12871},{\"MapId\":1001,\"NodeId\":12870}]",
+                        "ArrivalNodes": "[{\"MapId\":1001,\"NodeId\":12871},{\"MapId\":1001,\"NodeId\":12870}]"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "LoadElement",
+                        "NodeId": "12671",
+                        "ElementKey": "Vebie",
+                        "Position": "0,1,0",
+                        "EulerAngles":"0,90,0",
+                        "Scale":"1,1,1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "LoadElement",
+                        "NodeId": "12670",
+                        "ElementKey": "Lia",
+                        "Position": "0,1,0",
+                        "EulerAngles":"0,90,0",
+                        "Scale":"1,1,1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active": "False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "PlayAVG",
+                        "Name": "QSGuideAVG_02",
+                        "AVG配置备注": "此处应配置AVG-QSGuideAVG_02"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "LoadElement",
+                        "NodeId": "11673",
+                        "ElementKey": "900004",
+                        "Position": "0,1,0",
+                        "EulerAngles":"0,180,0",
+                        "Scale":"1,1,1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "LoadElement",
+                        "NodeId": "11058",
+                        "ElementKey": "50204",
+                        "Position": "0,0.5,0",
+                        "EulerAngles":"0,90,0",
+                        "Scale":"1,1,1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "LoadElement",
+                        "NodeId": "11262",
+                        "ElementKey": "50204",
+                        "Position": "0,0.5,0",
+                        "EulerAngles":"0,270,0",
+                        "Scale":"1,1,1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "LoadElement",
+                        "NodeId": "11873",
+                        "ElementKey": "Other148",
+                        "Position": "0,0.5,0",
+                        "EulerAngles":"0,0,0",
+                        "Scale":"1,1,1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "LoadElement",
+                        "NodeId": "11672",
+                        "ElementKey": "T_Arrow",
+                        "Position": "0,1,0",
+                        "EulerAngles":"0,0,0",
+                        "Scale":"1,1,1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.0",
+                        "Summary": "将遮罩透明度设置为0.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ShowMask",
+                        "Summary": "显示遮罩"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideNodeElement",
+                        "NodeIds": "[12671,12670]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "EnableNodeEvent",
+                        "NodeIds": "[11058,11262]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active": "False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=20>由『意志』所幻化——那风骚的身影，就是之前两人所指的莱真吗？\n有种‘不想靠近那家伙’的想法在脑内浮现啊</size>",
+                        "Position": "0,250",
+                        "ShowFrame": "True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active": "True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "WaitMoveTo",
+                        "PassingNodes": "[{\"MapId\":1001,\"NodeId\":11672}]",
+                        "ArrivalNodes": "[{\"MapId\":1001,\"NodeId\":11672}]"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "HideNodeElement",
+                        "NodeIds": "[11672]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "PlayAVG",
+                        "Name": "QSGuideAVG_03",
+                        "AVG配置备注": "此处应配置AVG-QSGuideAVG_03"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowSingleEffect",
+                        "EffectName": "FeatureUnlocked",
+                        "OverridElements": "{\"TxtTips\":\"功能·迷域 已开放\"}"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowNodeElement",
+                        "NodeIds": "[12672]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "EnableNodeEvent",
+                        "NodeIds": "[12673,11673]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.0",
+                        "Summary": "将遮罩透明度设置为0.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ShowMask",
+                        "Summary": "显示遮罩"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active": "False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=20>那气息不断汇聚，逐渐磅礴\n犹如实体具现化般闪耀\n那就是『迷域』的入口吗？</size>",
+                        "Position": "0,250",
+                        "ShowFrame": "True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "Teleport",
+                        "MapId": "1001",
+                        "NodeId": "11672"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "OpenArea",
+                "MapId": "1002",
+                "AreaId": "1"
+            }
+        }
+    ],
+    "CompleteConditions": [
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "P14_001"
+            }
+        }
+    ],
+    "Preconditions": [
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "P12_002"
+            }
+        }
+    ],
+    "DoData": [
+        {
+            "Data": {
+                "DoType": "DestroyNPC",
+                "NPCId":"104"
+            }
+        }
+    ]
+}

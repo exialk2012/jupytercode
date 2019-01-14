@@ -1,0 +1,289 @@
+{
+    "GuideName":"P13_001",
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "OpenPanel",
+                "PanelName": "MainPanel"
+            }
+        },
+        {
+            "Data": {
+                "TriggerType": "GuideCompleted",
+                "GuideName": "P12_004"
+            }
+        }
+    ],
+    "Preconditions":[
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "P12_004"
+            }
+        }
+    ],
+    "NodeData": [
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "1.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Teleport",
+                        "MapId": "1001",
+                        "NodeId": "8771"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel": "MainPanel",
+                        "Objects": "[\"Teleport\",\"ChatImage\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel": "PlayerPropertyPanel",
+                        "Objects": "[\"Parent\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "LoadElement",
+                        "NodeId": "9219",
+                        "ElementKey": "50204",
+                        "Position": "0,0.5,0",
+                        "EulerAngles": "0,0,0",
+                        "Scale": "1,1,1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "LoadElement",
+                        "NodeId": "8615",
+                        "ElementKey": "50204",
+                        "Position": "0,0.5,0",
+                        "EulerAngles": "0,0,0",
+                        "Scale": "1,1,1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "LoadElement",
+                        "NodeId": "10724",
+                        "ElementKey": "50204",
+                        "Position": "0,0.5,0",
+                        "EulerAngles": "0,0,0",
+                        "Scale": "1,1,1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "LoadElement",
+                        "NodeId": "9228",
+                        "ElementKey": "50204",
+                        "Position": "0,0.5,0",
+                        "EulerAngles": "0,0,0",
+                        "Scale": "1,1,1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "LoadElement",
+                        "NodeId": "9529",
+                        "ElementKey": "50204",
+                        "Position": "0,0.5,0",
+                        "EulerAngles": "0,0,0",
+                        "Scale": "1,1,1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideNodeElement",
+                        "NodeIds": "[9514,8023,8022,8021,8930,15067,8326]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "DisableNodeEvent",
+                        "NodeIds": "[8023,8022,8021,8020,14853,15067,15295,11023,11022,11021,11020,9369,9669,9519,9518,9668,8917,8317,8765,8617,10877,10875,10273,10423,8325,8324,10419,10719,9679,9829,9975,8626,10716,8326]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetCanWalk",
+                        "NodeIds": "[9369,9669,9519,9518,9668,8917,8317,8765,8617,10877,10875,10273,10423,8325,8324,10419,10719,9679,9829,9975,8626,8326]",
+                        "CanWalk": "True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetCanWalk",
+                        "NodeIds": "[8173,8172,8171,8170,14847,15061,15289,11023,11022,11021,11020]",
+                        "CanWalk": "False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.0",
+                        "Summary": "将遮罩透明度设置为0.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ShowMask",
+                        "Summary": "显示遮罩"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text":"<size=20>在周围寻找有关于『方石』的相关线索</size>",
+                        "Position":"0,250",
+                        "ShowFrame":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "WaitMoveTo",
+                        "PassingNodes":"[{\"MapId\":1001,\"NodeId\":10580}]",
+                        "ArrivalNodes":"[{\"MapId\":1001,\"NodeId\":10580}]"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "PlayAVG",
+                        "Name":"NewGuideAVG_16",
+                        "AVG配置备注": "此处应配置AVG-NewGuideAVG_16"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "1.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Teleport",
+                        "MapId": "1001",
+                        "NodeId": "10580"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "1"
+                    }
+                }
+            ]
+        }
+    ]
+}

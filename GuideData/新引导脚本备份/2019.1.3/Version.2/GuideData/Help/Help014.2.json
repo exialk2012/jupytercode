@@ -1,0 +1,55 @@
+{
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "OpenArea",
+                "MapId": "1001",
+                "AreaId":"20"
+            }
+        }
+    ],
+    "CompleteConditions": [
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "Guide015"
+            }
+        }
+    ],
+    "Preconditions":[
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "Guide014"
+            }
+        }
+    ],
+    "DoData": [
+        {
+            "Data": {
+                "DoType": "SetCanWalk",
+                "NodeIds":"[6943,6942,6941,6940,7140,7141,7142,7144,7353,7352]",
+                "CanWalk":"False"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "SetCanWalk",
+                "NodeIds":"[11058,12469,12067,11057,11262,12269,12267,11056,11673,8052,8544,9092]",
+                "CanWalk":"True"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "HideNodeElement",
+                "NodeIds":"[9039,9324,9885,9886,9887,6942,7141,7582,7358,11058,12469,12067,11057,11262,12269,12267,11056,11673,8052,8544,9092]"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "DisableNodeEvent",
+                "NodeIds":"[6942,6941,7141,11058,12469,12067,11057,11262,12269,12267,11056,11673,8052,8544,9092,11873]"
+            }
+        }
+    ]
+}

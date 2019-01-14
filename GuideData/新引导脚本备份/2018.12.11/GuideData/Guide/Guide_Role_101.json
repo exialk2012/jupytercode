@@ -1,0 +1,34 @@
+{
+    "GuideName":"Guide_Role_101",
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "NPCClick",
+                "NPCId": "101"
+            }
+        }
+    ],
+    "Preconditions":[
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "Guide007-1"
+            }
+        }
+    ],
+    "NodeData": [
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "PlayAVG",
+                        "Name":"0-32",
+                        "备注":"此处应替换首次点击101的AVG名称"
+                    }
+                }
+            ]
+        }
+    ]
+}
