@@ -1,0 +1,361 @@
+{
+    "GuideName":"Guide016",
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "OpenPanel",
+                "PanelName": "MainPanel"
+            }
+        },
+        {
+            "Data": {
+                "TriggerType": "GuideCompleted",
+                "GuideName": "Guide015.5"
+            }
+        }
+    ],
+    "Preconditions":[
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "Guide015.5"
+            }
+        }
+    ],
+    "NodeData": [
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "1.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Teleport",
+                        "MapId": "1001",
+                        "NodeId": "34183"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel": "MainPanel",
+                        "Objects": "[\"Teleport\",\"ChatImage\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel": "PlayerPropertyPanel",
+                        "Objects": "[\"Parent\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "WaitAreaOpen",
+                        "MapId":"1002",
+                        "AreaId":"1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"2"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "PlayAVG",
+                        "Name": "0-22",
+                        "AVG配置备注": "此处应配置AVG-阶段16的AVG"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowSingleEffect",
+                        "EffectName": "FeatureUnlocked",
+                        "OverridElements": "{\"TxtTips\":\"『合成』 已解锁\"}"                        
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.0",
+                        "Summary": "将遮罩透明度设置为0.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ShowMask",
+                        "Summary": "显示遮罩"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text":"<size=20>请点击重工，进入合成界面说明</size>",
+                        "Position":"0,250",
+                        "ShowFrame":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "WaitPanelOpen",
+                        "PanelName":"CompoundMaterialPanel"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowMask",
+                        "Summary": "显示遮罩"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text":"<size=20>合成可以将不同的材料转化，以获取新的物质\n点击关闭可退出合成</size>",
+                        "Position":"0,0",
+                        "ShowFrame":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "WaitPanelClose",
+                        "PanelName":"CompoundMaterialPanel"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "1.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Teleport",
+                        "MapId": "1002",
+                        "NodeId": "1077"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "0.5"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowSingleEffect",
+                        "EffectName": "FeatureUnlocked",
+                        "OverridElements": "{\"TxtTips\":\"『快捷传送』 开放\"}"                        
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowUIObject",
+                        "Panel": "MainPanel",
+                        "Objects": "[\"Teleport\",\"ChatImage\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.0",
+                        "Summary": "将遮罩透明度设置为0.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ShowMask",
+                        "Summary": "显示遮罩"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text":"<size=20>自从，关于剧情的发展将暂告一个段落\n请敬请期待之后的剧情\n同时还有一点要说明的是，在十字路口下方的通道处可以体验到另一条不同线路的故事</size>",
+                        "Position":"0,250",
+                        "ShowFrame":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"True"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,117 @@
+{
+    "GuideName":"Guide002",
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "OpenPanel",
+                "PanelName": "MainPanel"
+            }
+        }
+    ],
+    "NodeData": [
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha":"1.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Teleport",
+                        "MapId":"1001",
+                        "NodeId":"9873"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime" : "2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha":"0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel":"MainPanel",
+                        "Objects":"[\"PlayerInfo\",\"LeftButtons\",\"Teleport\",\"ChatImage\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel":"PlayerPropertyPanel",
+                        "Objects":"[\"Parent\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "DisableNodeEvent",
+                        "NodeIds":"[8056,8290,8544,6536,6740,6739,9038,9323,11873,11673,12673]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "PlayAVG",
+                        "Name":"NewGuideAVG_07"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "OpenUIPanel",
+                        "PanelName":"RenamePanel"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "WaitPanelClose",
+                        "PanelName":"RenamePanel"
+                    }
+                }
+            ]
+        }
+    ]
+}

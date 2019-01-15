@@ -1,0 +1,55 @@
+{
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "OpenArea",
+                "MapId": "1001",
+                "AreaId":"1"
+            }
+        }
+    ],
+    "CompleteConditions": [
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "Guide014"
+            }
+        }
+    ],
+    "Preconditions":[
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "Guide013"
+            }
+        }
+    ],
+    "DoData": [
+        {
+            "Data": {
+                "DoType": "HideNodeElement",
+                "NodeIds":"[9514,8023,8022,8021,8930,15061,9369,9669,9519,9219,8917,8317,8615,10877,10875,10724,8325,8324,9228,9679,9829,9529,8618,8468,8469,8628,9979,10727,8326]"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "DisableNodeEvent",
+                "NodeIds":"[8023,8022,8021,8020,11023,11022,11021,11020,9369,9669,9519,9219,8917,8317,8615,10877,10875,10724,8325,8324,9228,9679,9829,9529,8326]"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "SetCanWalk",
+                "NodeIds":"[8173,8172,8171,8170,11023,11022,11021,11020]",
+                "CanWalk":"False"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "SetCanWalk",
+                "NodeIds":"[9369,9669,9519,9219,8917,8317,8615,10877,10875,10724,8325,8324,9228,9679,9829,9529]",
+                "CanWalk":"True"
+            }
+        }
+    ]
+}

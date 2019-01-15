@@ -1,0 +1,373 @@
+{
+    "GuideName": "Guide001",
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "OpenPanel",
+                "PanelName": "MainPanel",
+                "Summary": "引导触发器设置为打开主界面面板后触发"
+            }
+        },
+        {
+            "Data": {
+                "TriggerType": "GuideCompleted",
+                "GuideName": "Guide000"
+            }
+        }
+    ],
+    "Preconditions":[
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "Guide000"
+            }
+        }
+    ],
+    "NodeData": [
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "UnlockModule",
+                        "Module": "CharacterProperty",
+                        "Summary": "解锁玩家属性"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "UnlockModule",
+                        "Module": "CardPack",
+                        "Summary": "解锁卡组"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "UnlockModule",
+                        "Module": "ExternalAdventure",
+                        "Summary": "解锁表世界冒险模块"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "UnlockModule",
+                        "Module": "Role",
+                        "Summary": "解锁角色"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "UnlockModule",
+                        "Module": "Bag",
+                        "Summary": "解锁背包"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "1.0",
+                        "Summary": "将遮罩透明度设置为1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=30>时间</size>",
+                        "Position": "0,0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "0.8"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=30>时间 空间</size>",
+                        "Position": "0,0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "0.8"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=30>时间 空间 混沌</size>",
+                        "Position": "0,0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "0.8"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=30>时间 空间 混沌 精神</size>",
+                        "Position": "0,0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "0.8"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=30>时间 空间 混沌 精神 意志</size>",
+                        "Position": "0,0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "0.8"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=30>一切，正在崩塌</size>",
+                        "Position": "0,0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "0.8"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=30>一切，正在崩塌.</size>",
+                        "Position": "0,0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "0.8"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=30>一切，正在崩塌..</size>",
+                        "Position": "0,0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "0.8"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=30>一切，正在崩塌...</size>",
+                        "Position": "0,0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "1.5"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "EnterAdventure",
+                        "AreaId": "20101",
+                        "SectionId": "201",
+                        "Summary": "进入表世界201节的20101区域"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "WaitPanelOpen",
+                        "PanelName": "AdventuringPanel"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "HideMask",
+                        "Summary": "隐藏遮罩"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "PlayAVG",
+                        "Name": "NewGuideAVG_01"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8",
+                        "Summary": "将遮罩透明度设置为0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ShowMask",
+                        "Summary": "显示遮罩"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ShowPictures",
+                        "Paths": "[\"MovePoint_01\"]",
+                        "Summary": "显示图片组"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "HideMask",
+                        "Summary": "隐藏遮罩"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "WaitPanelClose",
+                        "PanelName": "AdventuringClosingPanel",
+                        "Summary": "等待冒险结算面板关闭"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "1.0",
+                        "Summary": "将遮罩透明度设置为1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ShowMask",
+                        "Summary": "隐藏遮罩"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Teleport",
+                        "MapId": "1001",
+                        "NodeId": "9873",
+                        "Summary": "传送到1001地图的9873地图格"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Complete"
+                    }
+                }
+            ]
+        }
+    ]
+}

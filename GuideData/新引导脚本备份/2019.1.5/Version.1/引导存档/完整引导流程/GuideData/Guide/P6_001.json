@@ -1,0 +1,317 @@
+{
+    "GuideName":"P6_001",
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "OpenPanel",
+                "PanelName": "MainPanel"
+            }
+        },
+        {
+            "Data": {
+                "TriggerType": "GuideCompleted",
+                "GuideName": "P5_002"
+            }
+        }
+    ],
+    "Preconditions":[
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "P5_002"
+            }
+        }
+    ],
+    "NodeData": [
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha":"1.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Teleport",
+                        "MapId":"1001",
+                        "NodeId":"10837"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime" : "1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                      "DoType": "LoadElement",
+                      "NodeId": "12469",
+                      "ElementKey": "50204"
+                    }
+                },
+                {
+                    "Data": {
+                      "DoType": "LoadElement",
+                      "NodeId": "12269",
+                      "ElementKey": "50204"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideNodeElement",
+                        "NodeIds":"[10145,10143,6942,7141,9038,7582,7358,11058,12067,11057,12870,11262,12267,11056,13070,11673,8052,8544,9092,8037,9875,9613,9873]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel":"MainPanel",
+                        "Objects":"[\"Teleport\",\"ChatImage\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel":"PlayerPropertyPanel",
+                        "Objects":"[\"Parent\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetCanWalk",
+                        "NodeIds":"[9626,9625,9887,9886,9885,6943,6942,6941,6940,7140,7141,7142,7144,7353,7352,9324,9039]",
+                        "CanWalk":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetCanWalk",
+                        "NodeIds":"[11058,12067,11057,12870,11262,12267,11056,13070,11673,8052,8544,9092,8037]",
+                        "CanWalk":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "DisableNodeEvent",
+                        "NodeIds":"[10145,10144,10143,6942,6941,7141,9038,9323,11058,12067,11057,12870,11262,12267,11056,13070,11673,10838,8052,8544,9092,8037,11873]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha":"0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"False"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "PlayAVG",
+                        "Name":"PQAVG_2",
+                        "AVG配置备注": "此处应配置AVG-PQAVG_2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowSingleEffect",
+                        "EffectName": "FeatureUnlocked",
+                        "OverridElements": "{\"TxtTips\":\"功能·『迷域商店』 已开放\"}"                        
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "EnableNodeEvent",
+                        "NodeIds":"[10838]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.0",
+                        "Summary": "将遮罩透明度设置为0.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ShowMask",
+                        "Summary": "显示遮罩"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text":"<size=20>迷域商店已解锁，请再次点击卡莱尔</size>",
+                        "Position":"0,250",
+                        "ShowFrame":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "WaitPanelOpen",
+                        "PanelName":"StorePanel"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowMask",
+                        "Summary": "显示遮罩"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text":"<size=20>迷域商店内可以购买到很多游戏内的物品，相关功能请自行尝试，点击关闭可退出商店</size>",
+                        "Position":"0,0",
+                        "ShowFrame":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "WaitPanelClose",
+                        "PanelName":"StorePanel"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Teleport",
+                        "MapId":"1001",
+                        "NodeId":"10837"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                }
+            ]
+        }
+    ]
+}

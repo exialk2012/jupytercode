@@ -1,0 +1,279 @@
+{
+    "GuideName":"Guide011",
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "OpenPanel",
+                "PanelName": "MainPanel"
+            }
+        },
+        {
+            "Data": {
+                "TriggerType": "GuideCompleted",
+                "GuideName": "Guide010"
+            }
+        }
+    ],
+    "Preconditions":[
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "Guide010"
+            }
+        }
+    ],
+    "NodeData": [
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "1.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Teleport",
+                        "MapId": "1001",
+                        "NodeId": "8929"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel": "MainPanel",
+                        "Objects": "[\"Teleport\",\"ChatImage\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel": "PlayerPropertyPanel",
+                        "Objects": "[\"Parent\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active": "False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideNodeElement",
+                        "NodeIds":"[9514,8023,8022,8021,8930,15067,8326,9520]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "DisableNodeEvent",
+                        "NodeIds":"[9372,9371,9370,9522,9521,9520,9672,9671,9670,8326,11023,11022,11021,11020,8023,8022,8021,8020,14853,15067,15295,10717]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetCanWalk",
+                        "NodeIds":"[14847,15061,15289,11023,11022,11021,11020,8173,8172,8171,8170]",
+                        "CanWalk":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "PlayAVG",
+                        "Name":"PQAVG_5"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "LoadNpc",
+                        "NPCInfo":"{\"NpcId\":105, \"MapId\":1001, \"Area\":1, \"MinX\":59, \"MaxX\":59, \"MinY\":77, \"MaxY\":77, \"CanMove\":false}"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "PlayAVG",
+                        "Name":"PQAVG_8"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowSingleEffect",
+                        "EffectName": "FeatureUnlocked",
+                        "OverridElements": "{\"TxtTips\":\"『回廊』 已开放\"}"                        
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "DestroyNPC",
+                        "NPCId":"105"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ShowNodeElement",
+                        "NodeIds":"[9520]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "EnableNodeEvent",
+                        "NodeIds":"[9372,9371,9370,9522,9521,9520,9672,9671,9670]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.0",
+                        "Summary": "将遮罩透明度设置为0.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ShowMask",
+                        "Summary": "显示遮罩"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text":"<size=20>『回廊』竞技的封锁已解除\n点击中间的巨像，即可打开回廊界面</size>",
+                        "Position":"0,250",
+                        "ShowFrame":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "1.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Teleport",
+                        "MapId": "1001",
+                        "NodeId": "8929"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "1"
+                    }
+                }
+            ]
+        }
+    ]
+}

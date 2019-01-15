@@ -1,0 +1,41 @@
+{
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "OpenArea",
+                "MapId": "1001",
+                "AreaId":"1"
+            }
+        }
+    ],
+    "CompleteConditions": [
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "Guide008"
+            }
+        }
+    ],
+    "Preconditions":[
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "Guide007"
+            }
+        }
+    ],
+    "DoData": [
+        {
+            "Data": {
+                "DoType": "HideNodeElement",
+                "NodeIds":"[9520]"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "DisableNodeEvent",
+                "NodeIds":"[9370,9371,9372,9522,9521,9520,9670,9671,9672]"
+            }
+        }
+    ]
+}

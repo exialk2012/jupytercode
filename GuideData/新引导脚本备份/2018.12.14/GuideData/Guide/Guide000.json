@@ -1,0 +1,25 @@
+{
+    "GuideName": "Guide000",
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "OpenPanel",
+                "PanelName": "MainPanel",
+                "Summary": "引导触发器设置为打开主界面面板后触发"
+            }
+        }
+    ],
+    "NodeData": [
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "Complete"
+                    }
+                }
+            ]
+        }
+    ]
+}

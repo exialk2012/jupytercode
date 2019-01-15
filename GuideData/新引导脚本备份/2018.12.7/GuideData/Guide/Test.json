@@ -1,0 +1,8 @@
+{
+    "Data": {
+        "DoType": "HideUIObject",
+        "Panel": "AdventuringPanel",
+        "Objects": "[\"AdventuringPanel/Head\",\"AdventuringPanel/MercenaryHead\",\"AdventuringPanel/ImgDecorate-AdventureLevel\",\"AdventuringPanel/Buffs\",\"AdventuringPanel/ImgDecorate-Card\",\"AdventuringPanel/Tasks\",\"AdventuringPanel/ImgDecorate\",\"AdventuringPanel/ExternalBackpack\",\"AdventuringPanel/ImgDecorate-MoveCount\",\"AdventuringPanel/Backpack\",\"AdventuringPanel/MountPoint\"]",
+        "Summary": "隐藏冒险UI面板"
+    }
+}

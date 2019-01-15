@@ -1,0 +1,34 @@
+{
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "PassingNode",
+                "Nodes": "[{\"MapId\":1001,\"NodeId\":14851},{\"MapId\":1001,\"NodeId\":15065},{\"MapId\":1001,\"NodeId\":15293}]"
+            }
+        }
+    ],
+    "CompleteConditions": [
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "Guide009"
+            }
+        }
+    ],
+    "Preconditions":[
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "Guide003"
+            }
+        }
+    ],
+    "DoData": [
+        {
+            "Data": {
+                "DoType": "PlayAVG",
+                "Name": "DNAVG_04"
+            }
+        }
+    ]
+}

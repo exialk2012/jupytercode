@@ -1,0 +1,48 @@
+{
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "OpenArea",
+                "MapId": "1001",
+                "AreaId":"1"
+            }
+        }
+    ],
+    "CompleteConditions": [
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "Guide014"
+            }
+        }
+    ],
+    "Preconditions":[
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "Guide013"
+            }
+        }
+    ],
+    "DoData": [
+        {
+            "Data": {
+                "DoType": "HideNodeElement",
+                "NodeIds":"[9514,8023,8022,8021,8930,15061,8326]"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "DisableNodeEvent",
+                "NodeIds":"[8326,11023,11022,11021,11020,8023,8022,8021,8020,10717]"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "SetCanWalk",
+                "NodeIds":"[11023,11022,11021,11020,8173,8172,8171,8170]",
+                "CanWalk":"False"
+            }
+        }
+    ]
+}

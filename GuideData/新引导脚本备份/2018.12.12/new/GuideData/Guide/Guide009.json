@@ -1,0 +1,707 @@
+{
+    "GuideName": "Guide009",
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "OpenPanel",
+                "PanelName": "MainPanel"
+            }
+        },
+        {
+            "Data": {
+                "TriggerType": "GuideCompleted",
+                "GuideName": "Guide008"
+            }
+        }
+    ],
+    "Preconditions": [
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "Guide008"
+            }
+        }
+    ],
+    "NodeData": [
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel": "MainPanel",
+                        "Objects": "[\"Teleport\",\"ChatImage\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel": "PlayerPropertyPanel",
+                        "Objects": "[\"Parent\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideNodeElement",
+                        "NodeIds": "[8023,8022,8021,15067]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "DisableNodeEvent",
+                        "NodeIds": "[8023,8022,8021,8020,15067,15295,14853]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "WaitMoveTo",
+                        "PassingNodes":"[{\"MapId\":1001,\"NodeId\":10430},{\"MapId\":1001,\"NodeId\":10580},{\"MapId\":1001,\"NodeId\":10730}]",
+                        "ArrivalNodes":"[{\"MapId\":1001,\"NodeId\":10430},{\"MapId\":1001,\"NodeId\":10580},{\"MapId\":1001,\"NodeId\":10730}]"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "PlayAVG",
+                        "Name":"NewGuideAVG_16"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.0",
+                        "Summary": "将遮罩透明度设置为0.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ShowMask",
+                        "Summary": "显示遮罩"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text":"<size=20>前往『迷域』所在的十字路口区域，寻找小女孩吧</size>",
+                        "Position":"0,250",
+                        "ShowFrame":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "WaitMoveTo",
+                        "PassingNodes":"[{\"MapId\":1001,\"NodeId\":7357},{\"MapId\":1001,\"NodeId\":7582}]",
+                        "ArrivalNodes":"[{\"MapId\":1001,\"NodeId\":7357},{\"MapId\":1001,\"NodeId\":7582}]"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "PlayAVG",
+                        "Name":"PQAVG_9"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowSingleEffect",
+                        "EffectName": "FeatureUnlocked",
+                        "OverridElements": "{\"TxtTips\":\"挑战区域 开放\"}"                        
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.0",
+                        "Summary": "将遮罩透明度设置为0.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ShowMask",
+                        "Summary": "显示遮罩"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text":"<size=20>请前往中央区域右上方的挑战区域</size>",
+                        "Position":"0,250",
+                        "ShowFrame":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "WaitMoveTo",
+                        "PassingNodes":"[{\"MapId\":1001,\"NodeId\":10430},{\"MapId\":1001,\"NodeId\":10580},{\"MapId\":1001,\"NodeId\":10730}]",
+                        "ArrivalNodes":"[{\"MapId\":1001,\"NodeId\":10430},{\"MapId\":1001,\"NodeId\":10580},{\"MapId\":1001,\"NodeId\":10730}]"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "PlayAVG",
+                        "Name":"PQAVG_10"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "HideNodeElement",
+                        "NodeIds":"[9513,8780,9080,9520]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "DisableNodeEvent",
+                        "NodeIds":"[9363,9513,9663,8780,8930,9080,9372,9371,9370,9522,9521,9520,9672,9671,9670]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ShowNodeElement",
+                        "NodeIds":"[15067]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "EnableNodeEvent",
+                        "NodeIds":"[15067,15295,14853]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.0",
+                        "Summary": "将遮罩透明度设置为0.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ShowMask",
+                        "Summary": "显示遮罩"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text":"<size=20>请进入挑战区域\n<color=red>（通往其他区域的入口将暂时关闭）</color></size>",
+                        "Position":"0,250",
+                        "ShowFrame":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "WaitAreaOpen",
+                        "MapId":"1001",
+                        "AreaId":"16"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "LoadNpc",
+                        "NPCInfo":"{\"NpcId\":104, \"MapId\":1001, \"Area\":16, \"MinX\":111, \"MaxX\":111, \"MinY\":73, \"MaxY\":73, \"CanMove\":false}"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "PlayAVG",
+                        "Name":"PQAVG_13"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowSingleEffect",
+                        "EffectName": "FeatureUnlocked",
+                        "OverridElements": "{\"TxtTips\":\"『挑战』 解锁\"}"                        
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "DestroyNPC",
+                        "NPCId":"104"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "HideNodeElement",
+                        "NodeIds":"[23584]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "DisableNodeEvent",
+                        "NodeIds":"[23784,23584,23384]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.0",
+                        "Summary": "将遮罩透明度设置为0.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ShowMask",
+                        "Summary": "显示遮罩"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text":"<size=20>继续前进即可选择挑战关卡</size>",
+                        "Position":"0,250",
+                        "ShowFrame":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "WaitPanelOpen",
+                        "PanelName":"AreaPanel"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "PlayAVG",
+                        "Name":"PQAVG_11"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text":"请点击<size=30><color=green>投影之始</color>关卡</size>",
+                        "Position":"0,-330"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel":"AreaPanel",
+                        "Objects":"[\"AreaPanel/ChooseLevelPanel/Selectors/Positions/PositionLevel01/LevelSelector\"]",
+                        "Order":"1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text":"请点击<size=30><color=green>准备</color>按钮</size>",
+                        "Position":"0,-330"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel":"AreaPanel",
+                        "Objects":"[\"AreaPanel/ChallengeDetailsPanel/BtnPrepareForBattle\"]",
+                        "Order":"1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "WaitPanelClose",
+                        "PanelName" : "AreaPanel"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowSingleEffect",
+                        "EffectName": "FeatureUnlocked",
+                        "OverridElements": "{\"TxtTips\":\"『快捷传送』 开放\"}"                        
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowUIObject",
+                        "Panel": "MainPanel",
+                        "Objects": "[\"Teleport\",\"ChatImage\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ShowNodeElement",
+                        "NodeIds":"[23586]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "EnableNodeEvent",
+                        "NodeIds":"[23786,23586,23386]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.0",
+                        "Summary": "将遮罩透明度设置为0.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ShowMask",
+                        "Summary": "显示遮罩"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text":"<size=20>引导结束，请尽情体验吧</size>",
+                        "Position":"0,250",
+                        "ShowFrame":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"True"
+                    }
+                }
+            ]
+        }
+    ]
+}

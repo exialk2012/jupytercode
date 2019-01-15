@@ -1,0 +1,39 @@
+{
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "PassingNode",
+                "Nodes": "[{\"MapId\":1001,\"NodeId\":9616},{\"MapId\":1001,\"NodeId\":9877},{\"MapId\":1001,\"NodeId\":10135},{\"MapId\":1001,\"NodeId\":9353},{\"MapId\":1001,\"NodeId\":9614},{\"MapId\":1001,\"NodeId\":9613},{\"MapId\":1001,\"NodeId\":9612},{\"MapId\":1001,\"NodeId\":9611},{\"MapId\":1001,\"NodeId\":9610},{\"MapId\":1001,\"NodeId\":9609},{\"MapId\":1001,\"NodeId\":9608},{\"MapId\":1001,\"NodeId\":9869},{\"MapId\":1001,\"NodeId\":10109}]"
+            }
+        }
+    ],
+    "CompleteConditions": [
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "Guide006"
+            }
+        }
+    ],
+    "DoData": [
+        {
+            "Data": {
+                "DoType": "SetTips",
+                "Text": "请往右边走",
+                "Position": "0,0",
+                "ShowFrame": "True"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "Await",
+                "WaitTime": "1.5"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "ClearTips"
+            }
+        }
+    ]
+}

@@ -1,0 +1,380 @@
+{
+    "GuideName":"Guide007",
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "OpenPanel",
+                "PanelName": "MainPanel"
+            }
+        },
+        {
+            "Data": {
+                "TriggerType": "GuideCompleted",
+                "GuideName": "Guide006"
+            }
+        }
+    ],
+    "Preconditions":[
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "Guide006"
+            }
+        }
+    ],
+    "NodeData": [
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "1.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Teleport",
+                        "MapId": "1001",
+                        "NodeId": "8286"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel": "MainPanel",
+                        "Objects": "[\"Teleport\",\"ChatImage\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel": "PlayerPropertyPanel",
+                        "Objects": "[\"Parent\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetCanWalk",
+                        "NodeIds":"[7143,6943,6942,7142,7141,6941,7353,7352,9039,9324]",
+                        "CanWalk":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideNodeElement",
+                        "NodeIds":"[9038,9877,9887,9886,9885,7582,7358,11873,6942,7141]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "DisableNodeEvent",
+                        "NodeIds":"[6942,6941,7141,9038,9323,11873]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active": "True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "WaitAreaOpen",
+                        "MapId": "1001",
+                        "AreaId":"3"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowNodeElement",
+                        "NodeIds":"[9349,9649]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideNodeElement",
+                        "NodeIds":"[9500,15470,9045,9046]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "DisableNodeEvent",
+                        "NodeIds":"[9350,9500,9650,15470]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetCanWalk",
+                        "NodeIds":"[9350,9500,9650,9349]",
+                        "CanWalk":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.0",
+                        "Summary": "将遮罩透明度设置为0.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ShowMask",
+                        "Summary": "显示遮罩"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text":"<size=20>当前所处的区域即是战技所区域\n荻西委托给你所要寻找的人应该也在此处吧\n请找到他吧</size>",
+                        "Position":"0,250",
+                        "ShowFrame":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetCanWalk",
+                        "NodeIds":"[9344,9345,9645,9644]",
+                        "CanWalk":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "WaitMoveTo",
+                        "PassingNodes":"[{\"MapId\":1001,\"NodeId\":9495}]",
+                        "ArrivalNodes":"[{\"MapId\":1001,\"NodeId\":9495}]"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "PlayAVG",
+                        "Name":"PQAVG_3",
+                        "备注":"此处应该配置PQ AVG_3"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ShowSingleEffect",
+                        "EffectName": "FeatureUnlocked",
+                        "OverridElements": "{\"TxtTips\":\"『战技所』 已开放\"}"                        
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowNodeElement",
+                        "NodeIds":"[15470]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "EnableNodeEvent",
+                        "NodeIds":"[15470]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetCanWalk",
+                        "NodeIds":"[9344,9345,9645,9644,15470]",
+                        "CanWalk":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.0",
+                        "Summary": "将遮罩透明度设置为0.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ShowMask",
+                        "Summary": "显示遮罩"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text":"<size=20>进入战技所房屋门口的传送阵，即可进入『战技所』</size>",
+                        "Position":"0,250",
+                        "ShowFrame":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"2"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "Teleport",
+                        "MapId":"1001",
+                        "NodeId":"9495"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"True"
+                    }
+                }
+            ]
+        }
+    ]
+}

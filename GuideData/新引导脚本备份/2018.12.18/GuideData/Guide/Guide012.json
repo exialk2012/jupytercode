@@ -1,0 +1,236 @@
+{
+    "GuideName":"Guide012",
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "OpenPanel",
+                "PanelName": "MainPanel"
+            }
+        },
+        {
+            "Data": {
+                "TriggerType": "GuideCompleted",
+                "GuideName": "Guide011"
+            }
+        }
+    ],
+    "Preconditions":[
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "Guide011"
+            }
+        }
+    ],
+    "NodeData": [
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "1.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Teleport",
+                        "MapId": "1001",
+                        "NodeId": "8929"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel": "MainPanel",
+                        "Objects": "[\"Teleport\",\"ChatImage\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel": "PlayerPropertyPanel",
+                        "Objects": "[\"Parent\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideNodeElement",
+                        "NodeIds":"[8799,8929,9664,9364,10717,10566,8469,8468,8618,8023,8022,8021,8326,8628,9829,9979,10727,15067]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "DisableNodeEvent",
+                        "NodeIds":"[10717,10716,8023,8022,8021,8020,8326,15067,15295,14853,11021,11020]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetCanWalk",
+                        "NodeIds":"[8173,8172,8171,8170,14847,15061,15289]",
+                        "CanWalk":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "WaitPanelOpen",
+                        "PanelName":"RankEnterPanel"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text":"请点击<size=30><color=green>回廊</color>进入</size>",
+                        "Position":"0,-330"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel":"RankEnterPanel",
+                        "Objects":"[\"RankEnterPanel/BtnRank\"]",
+                        "Order":"1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetInteractableNames",
+                        "Names":"[\"Mask\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text":"本界面即是『回廊』战斗开始前的准备界面，与『迷域』的准备界面在功能使用上基本一致",
+                        "Position":"0,0"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel":"PreparationPanel",
+                        "Objects":"[\"PreparationPanel/BtnBack\"]",
+                        "Order":"1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text":"请点击返回按钮进行返回",
+                        "Position":"0,-330"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "1.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Teleport",
+                        "MapId": "1001",
+                        "NodeId": "9972"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "0.5"
+                    }
+                }
+            ]
+        }
+    ]
+}

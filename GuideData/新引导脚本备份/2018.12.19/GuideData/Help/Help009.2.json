@@ -1,0 +1,54 @@
+{
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "OpenArea",
+                "MapId": "1001",
+                "AreaId":"1"
+            }
+        }
+    ],
+    "CompleteConditions": [
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "Guide011"
+            }
+        }
+    ],
+    "Preconditions":[
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "Guide009"
+            }
+        }
+    ],
+    "DoData": [
+        {
+            "Data": {
+                "DoType": "DestroyNPC",
+                "NPCId":"50204"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "HideNodeElement",
+                "NodeIds":"[9514,8171,8930,9664,9364,10717,10566,10716,8469,8468,8618,8023,8022,8021,9520,8326,8628,9829,9979,10727,8780,9080,15067]"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "DisableNodeEvent",
+                "NodeIds":"[10717,10716,8023,8022,8021,8020,9372,9371,9370,9522,9520,9672,9671,9670,8326,8780,8930,9080,15067,15295,14853,11021,11020]"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "SetCanWalk",
+                "NodeIds":"[8780,8930,9080,14847,15061,15289,11023,11022,11021,11020]",
+                "CanWalk":"False"
+            }
+        }
+    ]
+}

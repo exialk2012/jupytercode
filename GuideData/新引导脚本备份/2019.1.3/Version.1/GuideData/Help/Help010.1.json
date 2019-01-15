@@ -1,0 +1,34 @@
+{
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "PassingNode",
+                "Nodes": "[{\"MapId\":1002,\"NodeId\":1280}]"
+            }
+        }
+    ],
+    "CompleteConditions": [
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "Guide015"
+            }
+        }
+    ],
+    "Preconditions":[
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "Guide009.5"
+            }
+        }
+    ],
+    "DoData": [
+        {
+            "Data": {
+                "DoType": "PlayAVG",
+                "Name": "NewGuideAVG_15"
+            }
+        }
+    ]
+}

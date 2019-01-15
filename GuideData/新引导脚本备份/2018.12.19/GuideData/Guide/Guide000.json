@@ -1,0 +1,23 @@
+{
+    "GuideName": "Guide000",
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "LoginSuccess"
+            }
+        }
+    ],
+    "NodeData": [
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "Complete"
+                    }
+                }
+            ]
+        }
+    ]
+}

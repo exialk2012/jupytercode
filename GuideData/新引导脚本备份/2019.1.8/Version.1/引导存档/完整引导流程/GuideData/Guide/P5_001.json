@@ -1,0 +1,717 @@
+{
+    "GuideName":"P5_001",
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "OpenPanel",
+                "PanelName": "MainPanel"
+            }
+        },
+        {
+            "Data": {
+                "TriggerType": "GuideCompleted",
+                "GuideName": "P4_002"
+            }
+        }
+    ],
+    "Preconditions":[
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "P4_002"
+            }
+        }
+    ],
+    "NodeData": [
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha":"1.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Teleport",
+                        "MapId":"1001",
+                        "NodeId":"12672"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime" : "1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel":"MainPanel",
+                        "Objects":"[\"LeftButtons\",\"Teleport\",\"ChatImage\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel":"PlayerPropertyPanel",
+                        "Objects":"[\"Parent\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "LoadElement",
+                        "NodeId": "10838",
+                        "ElementKey": "900004",
+                        "Position": "0,1,0",
+                        "EulerAngles":"0,180,0",
+                        "Scale":"1,1,1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "LoadElement",
+                        "NodeId": "12469",
+                        "ElementKey": "50204",
+                        "Position": "0,0.5,0",
+                        "EulerAngles":"0,270,0",
+                        "Scale":"1,1,1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "LoadElement",
+                        "NodeId": "12269",
+                        "ElementKey": "50204",
+                        "Position": "0,0.5,0",
+                        "EulerAngles":"0,90,0",
+                        "Scale":"1,1,1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideNodeElement",
+                        "NodeIds": "[11673,11873,11058,11262]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "DisableNodeEvent",
+                        "NodeIds": "[11673,11058,11262]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "EnableNodeEvent",
+                        "NodeIds": "[12469,12269]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetCanWalk",
+                        "NodeIds": "[11673,11873,11058,11262]",
+                        "CanWalk": "True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetCanWalk",
+                        "NodeIds": "[10838,12469,12269]",
+                        "CanWalk": "False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha":"0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"False"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "PlayAVG",
+                        "Name":"NewGuideAVG_11",
+                        "AVG配置备注": "此处应配置AVG-NewGuideAVG_11"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowSingleEffect",
+                        "EffectName": "FeatureUnlocked",
+                        "OverridElements": "{\"TxtTips\":\"『意志等级奖励』已解锁\"}"                        
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"0.5"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowUIObject",
+                        "Panel":"MainPanel",
+                        "Objects":"[\"LeftButtons\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel":"MainPanel",
+                        "Objects":"[\"LeftButtons/BtnActive\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"0.5"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=20>所谓『意志等级奖励』\n即是意志成长到特定阶段下所给予的回应\n那么请点击<color=red>『奖励』</color>查看吧</size>",
+                        "Position": "0,-300"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel": "MainPanel",
+                        "Objects": "[\"LeftButtons/BtnLevelAward\"]",
+                        "Order": "1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "0.5"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowMask"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetInteractableNames",
+                        "Names": "[\"Mask\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=20><color=green>『战技碎片』</color>，<color=green>『物资』</color>，<color=green>『财富』</color>\n名为『回应』的支援真是种类齐全</size>",
+                        "Position": "0,-300",
+                        "ShowFrame":"True"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "0.1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowMask"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetInteractableNames",
+                        "Names": "[\"Mask\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=20>不过满足『意志』的期待，从而给予回应这也是理所当然的结果</size>",
+                        "Position": "0,-300",
+                        "ShowFrame":"True"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "0.1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=20>不过现在并非夸耀意志伟大的最佳时机\n有着更为紧迫的状况要处理吧\n那么接下来请点击<color=red>『关闭』</color>吧</size>",
+                        "Position": "0,-300"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel": "PlayerLevelAwardPanel",
+                        "Objects": "[\"BtnClose\"]",
+                        "Order": "1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowSingleEffect",
+                        "EffectName": "FeatureUnlocked",
+                        "OverridElements": "{\"TxtTips\":\"『活跃任务』已解锁\"}"                        
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"0.5"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowUIObject",
+                        "Panel":"MainPanel",
+                        "Objects":"[\"LeftButtons/BtnActive\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"0.5"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=25>『活跃任务』</size><size=20>\n为了取回力量所必须去履行的途径之一，也是灵所特意挑选的产物\n那么究竟会是怎样的试炼，请点击<color=red>『任务』</color>查看吧</size>",
+                        "Position": "0,-300"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel": "MainPanel",
+                        "Objects": "[\"LeftButtons/BtnActive\"]",
+                        "Order": "1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "0.5"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowMask"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetInteractableNames",
+                        "Names": "[\"Mask\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=20><color=red>『为了探究境域所存在的任务』</color>\n<color=green>『为了寻求真相所必须的任务』</color>\n<color=blue>『为了某种特定含义所孕育出来的任务』</color></size>",
+                        "Position": "0,-300",
+                        "ShowFrame":"True"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "0.1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowMask"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetInteractableNames",
+                        "Names": "[\"Mask\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=20>虽然其中混杂着意义不明，甚至可以作为恶趣味被对待的条目\n不过依然有着攻克它们的价值</size>",
+                        "Position": "0,-300",
+                        "ShowFrame":"True"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "0.1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": true,
+            "IsAutoToNext": false,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ShowMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text": "<size=20>不断探索，不断追求，在过程中解决才是正确的判断\n那么请暂时的<color=red>『关闭』</color>任务吧，请在有需要的时候开启</size>",
+                        "Position": "0,-300"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Highlight",
+                        "Panel": "ActivePanel",
+                        "Objects": "[\"BtnClose\"]",
+                        "Order": "1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ClearHighlight"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime": "1"
+                    }
+                }
+            ]
+        }
+    ]
+}

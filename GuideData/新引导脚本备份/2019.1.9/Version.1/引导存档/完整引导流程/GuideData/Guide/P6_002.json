@@ -1,0 +1,254 @@
+{
+    "GuideName":"P6_002",
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "OpenPanel",
+                "PanelName": "MainPanel"
+            }
+        },
+        {
+            "Data": {
+                "TriggerType": "GuideCompleted",
+                "GuideName": "P6_001"
+            }
+        }
+    ],
+    "Preconditions":[
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "P6_001"
+            }
+        }
+    ],
+    "NodeData": [
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha":"1.0"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Teleport",
+                        "MapId":"1001",
+                        "NodeId":"10837"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime" : "1"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel":"MainPanel",
+                        "Objects":"[\"Teleport\",\"ChatImage\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideUIObject",
+                        "Panel":"PlayerPropertyPanel",
+                        "Objects":"[\"Parent\"]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "LoadElement",
+                        "NodeId": "8052",
+                        "ElementKey": "50204",
+                        "Position": "0,0.5,0",
+                        "EulerAngles":"0,90,0",
+                        "Scale":"1,1,1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "LoadElement",
+                        "NodeId": "8051",
+                        "ElementKey": "flower004",
+                        "Position": "0,0.5,0",
+                        "EulerAngles":"0,0,0",
+                        "Scale":"1,1,1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "LoadElement",
+                        "NodeId": "8053",
+                        "ElementKey": "Other072",
+                        "Position": "0,0.5,0",
+                        "EulerAngles":"0,0,0",
+                        "Scale":"1,1,1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "LoadElement",
+                        "NodeId": "7828",
+                        "ElementKey": "Other073",
+                        "Position": "0,0.5,0",
+                        "EulerAngles":"0,0,0",
+                        "Scale":"1,1,1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "LoadElement",
+                        "NodeId": "8286",
+                        "ElementKey": "T_Arrow",
+                        "Position": "0,0.5,0",
+                        "EulerAngles":"0,0,0",
+                        "Scale":"1,1,1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideNodeElement",
+                        "NodeIds": "[10361,10613,10830]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetCanWalk",
+                        "NodeIds":"[10362,10361,10360,10613,10830]",
+                        "CanWalk":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetCanWalk",
+                        "NodeIds":"[7828,8051,8052,8053]",
+                        "CanWalk":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha":"0.8"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "LoadElement",
+                        "NodeId": "9874",
+                        "ElementKey": "F_Arrow",
+                        "Position": "0.5,3,0",
+                        "EulerAngles":"90,90,0",
+                        "Scale":"1,1,1"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetTips",
+                        "Text":"<size=20>满足了莱真的希冀，继续在此区域中进行线索的探寻吧\n<color=red>（也许前往上方区域会有意想不到的收获）</color></size>",
+                        "Position":"0,250",
+                        "ShowFrame":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"True"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Await",
+                        "WaitTime":"3"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "HideNodeElement",
+                        "NodeIds": "[9874]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "ClearTips"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "WaitMoveTo",
+                        "PassingNodes":"[{\"MapId\":1001,\"NodeId\":8286}]",
+                        "ArrivalNodes":"[{\"MapId\":1001,\"NodeId\":8286}]"
+                    }
+                }
+            ]
+        },
+        {
+            "IsClickToNext": false,
+            "IsAutoToNext": true,
+            "DoData": [
+                {
+                    "Data": {
+                        "DoType": "HideNodeElement",
+                        "NodeIds": "[8286]"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMapActive",
+                        "Active":"False"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "Teleport",
+                        "MapId":"1001",
+                        "NodeId":"8286"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "HideMask"
+                    }
+                },
+                {
+                    "Data": {
+                        "DoType": "SetMaskAlpha",
+                        "Alpha": "0.8"
+                    }
+                }
+            ]
+        }
+    ]
+}

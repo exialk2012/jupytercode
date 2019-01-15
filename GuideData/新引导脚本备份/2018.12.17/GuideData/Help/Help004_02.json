@@ -1,0 +1,34 @@
+{
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "PassingNode",
+                "Nodes": "[{\"MapId\":1001,\"NodeId\":7354}]"
+            }
+        }
+    ],
+    "CompleteConditions": [
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "Guide008"
+            }
+        }
+    ],
+    "Preconditions":[
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "Guide003"
+            }
+        }
+    ],
+    "DoData": [
+        {
+            "Data": {
+                "DoType": "PlayAVG",
+                "Name": "DNAVG_02"
+            }
+        }
+    ]
+}

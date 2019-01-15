@@ -1,0 +1,105 @@
+{
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "OpenArea",
+                "MapId": "1001",
+                "AreaId": "1"
+            }
+        }
+    ],
+    "CompleteConditions": [
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "P14_001"
+            }
+        }
+    ],
+    "Preconditions": [
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "P13_003"
+            }
+        }
+    ],
+    "DoData": [
+        {
+            "Data": {
+                "DoType": "LoadElement",
+                "NodeId": "9518",
+                "ElementKey": "50204",
+                "Position": "0,0.5,0",
+                "EulerAngles": "0,0,0",
+                "Scale": "1,1,1"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "LoadElement",
+                "NodeId": "8765",
+                "ElementKey": "50204",
+                "Position": "0,0.5,0",
+                "EulerAngles": "0,0,0",
+                "Scale": "1,1,1"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "LoadElement",
+                "NodeId": "10273",
+                "ElementKey": "50204",
+                "Position": "0,0.5,0",
+                "EulerAngles": "0,0,0",
+                "Scale": "1,1,1"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "LoadElement",
+                "NodeId": "10419",
+                "ElementKey": "50204",
+                "Position": "0,0.5,0",
+                "EulerAngles": "0,0,0",
+                "Scale": "1,1,1"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "LoadElement",
+                "NodeId": "9975",
+                "ElementKey": "50204",
+                "Position": "0,0.5,0",
+                "EulerAngles": "0,0,0",
+                "Scale": "1,1,1"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "HideNodeElement",
+                "NodeIds": "[9514,8023,8022,8021,8930,15061,8326]"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "DisableNodeEvent",
+                "NodeIds": "[8023,8022,8021,8020,11023,11022,11021,11020,9369,9669,9519,9219,9668,8917,8317,8615,8617,10877,10875,10724,10423,8325,8324,9228,10719,9679,9829,9529,8626,10716,8326]"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "SetCanWalk",
+                "NodeIds": "[9369,9669,9519,9219,9668,8917,8317,8615,8617,10877,10875,10724,10423,8325,8324,9228,10719,9679,9829,9529,8626,8326]",
+                "CanWalk": "True"
+            }
+        },
+        {
+            "Data": {
+                "DoType": "SetCanWalk",
+                "NodeIds": "[8173,8172,8171,8170,11023,11022,11021,11020]",
+                "CanWalk": "False"
+            }
+        }
+    ]
+}

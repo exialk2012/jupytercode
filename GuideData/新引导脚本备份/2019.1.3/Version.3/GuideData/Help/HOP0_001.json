@@ -1,0 +1,38 @@
+{
+    "Triggers": [
+        {
+            "Data": {
+                "TriggerType": "LoginSuccess"
+            }
+        },
+        {
+            "Data": {
+                "TriggerType": "GuideCompleted",
+                "GuideName": "P0_002"
+            }
+        }
+    ],
+    "CompleteConditions": [
+        {
+            "Data": {
+                "ConditionType": "SimpleValue",
+                "Value": "False"
+            }
+        }
+    ],
+    "Preconditions":[
+        {
+            "Data": {
+                "ConditionType": "GuideCompleted",
+                "GuideName": "P0_002"
+            }
+        }
+    ],
+    "DoData": [
+        {
+            "Data": {
+                "DoType": "EnterGame"
+            }
+        }
+    ]
+}
