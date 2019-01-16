@@ -28,7 +28,7 @@ def getgamename(gamelink_list,s,myheaders):
         tree = etree.HTML(detal_resp.content)
         name = tree.xpath('//h1[@itemprop="name"]/text()')
         rating_value = tree.xpath('//span[@itemprop="ratingValue"]/text()')
-        author = tree.xpath('//div/div[@class="header-text-author"]//span[@itemprop="name"]/text()')
+        # author = tree.xpath('//div/div[@class="header-text-author"]//span[@itemprop="name"]/text()')
         gametype = tree.xpath('//ol[@class="breadcrumb"]/li/a[@href]/text()')
         # soup = BeautifulSoup(detal_resp,'lxml')
         # soup.select()
@@ -64,6 +64,28 @@ def getgamecount(gamelinke_list,s,myheaders):
 
 
 
+def getgamesize(gamelink_list,s,myheaders):
+    size_list = []
+    for link in gamelink_list:
+        detal_resp = s.get(link,headers=myheaders)
+        tree = etree.HTML(detal_resp.content)
+        size = tree.xpath('//li/span[contains(text(),"B")]/text()')
+        if size:
+            size_list.append(size[0])
+        else:
+            size_list.append('无容量信息')
+    return size_list
+
+
+def getcommentcount(gamelink_list,s,myheaders):
+    comment_count_list = []
+    for link in gamelink_list:
+        detal_resp = s.get(link,headers=myheaders)
+        tree = etree.HTML(detal_resp.content)
+        comment_count = tree.xpath('//a[@data-taptap-tab="review"]/small/text()')
+        comment_count_list.append(comment_count[0])
+    return comment_count_list
+
 def main():
     s = requests.Session()
     myheaders = {
@@ -74,16 +96,21 @@ def main():
     
     name_list,rating_list,type_list = getgamename(gamelink_list,s,myheaders)
     install_list,guanzhu_list = getgamecount(gamelink_list,s,myheaders)
+    gamesize_list = getgamesize(gamelink_list,s,myheaders)
+    comment_count_list = getcommentcount(gamelink_list,s,myheaders)
+    # print(comment_count_list)
     game_data = {
         '游戏名称':name_list,
         '游戏评分':rating_list,
         '游戏类型':type_list,
         '安装、预约、购买人数':install_list,
         '关注人数':guanzhu_list,
+        '游戏容量':gamesize_list,
+        '评论数':comment_count_list
     }
 
     game_data_df = DataFrame(game_data)
-    game_data_df.to_excel('taptaphot.xlsx',sheet_name='gamedata')
+    game_data_df.to_excel('taptaphot.xlsx',sheet_name='GameData2')
     # print(game_data)
 
 if __name__ == "__main__":
